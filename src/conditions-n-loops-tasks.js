@@ -169,8 +169,83 @@ function convertToRomanNumerals(num) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  let answer = '';
+  for (let i = 0; i < numberStr.length; i += 1) {
+    if (numberStr[i] === '1') {
+      answer += 'one';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '2') {
+      answer += 'two';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '3') {
+      answer += 'three';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '4') {
+      answer += 'four';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '5') {
+      answer += 'five';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '6') {
+      answer += 'six';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '7') {
+      answer += 'seven';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '8') {
+      answer += 'eight';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '9') {
+      answer += 'nine';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '0') {
+      answer += 'zero';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '.' || numberStr[i] === ',') {
+      answer += 'point';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+    if (numberStr[i] === '-') {
+      answer += 'minus';
+      if (i < numberStr.length - 1) {
+        answer += ' ';
+      }
+    }
+  }
+  return answer;
 }
 
 /**
